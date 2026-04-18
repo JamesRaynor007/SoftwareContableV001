@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Actualización Incremental</title>
+  <link rel="stylesheet" href="Css/update.css" />
+  <!-- Cargar librerías desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Actualización Incremental</h1>
+      <p>Cargar base consolidada y aplicar nuevas transacciones</p>
+    </header>
+
+    <!-- Botón de retorno -->
+    <button id="returnBtn" class="btn"><i class="fas fa-arrow-left"></i> Retornar</button>
+
+    <div class="controls">
+      <!-- Cargar JSON base -->
+      <label for="baseFile">Archivo Base (JSON):</label>
+      <input type="file" id="baseFile" accept=".json" />
+      <button id="loadBaseBtn" class="btn"><i class="fas fa-database"></i> Cargar Base</button>
+
+      <!-- Cargar archivo incremental -->
+      <label for="updateFile">Archivo Incremental (CSV/XLSX):</label>
+      <input type="file" id="updateFile" accept=".csv,.xlsx" />
+      <button id="updateBtn" class="btn"><i class="fas fa-sync-alt"></i> Actualizar Consolidado</button>
+
+      <!-- Descargas -->
+      <button id="downloadConsolidatedBtn" class="btn"><i class="fas fa-download"></i> Descargar Consolidado</button>
+      <button id="downloadLogBtn" class="btn"><i class="fas fa-file-alt"></i> Descargar Log</button>
+    </div>
+
+    <div id="status" class="status">Esperando archivo base...</div>
+    <div id="logTable" class="kpi-grid"></div>
+  </div>
+
+  <!-- Script al final del body -->
+  <script src="scripts/update.js"></script>
+  <!-- Íconos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

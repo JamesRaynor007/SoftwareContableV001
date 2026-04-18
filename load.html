@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carga de Transacciones</title>
+
+  <!-- Vincula el CSS agresivo -->
+  <link rel="stylesheet" href="Css/load.css" />
+
+  <!-- Librería de íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Scripts necesarios -->
+  <script src="papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Carga de Transacciones</h1>
+      <p>Importar, exportar, descargar template y cargar transacciones en línea</p>
+    </header>
+
+    <!-- Botón de retorno -->
+    <button id="returnBtn" class="btn"><i class="fas fa-arrow-left"></i> Volver</button>
+
+    <!-- Controles -->
+    <div class="controls">
+      <input type="file" id="fileInput" accept=".csv,.xlsx" />
+      <button id="importBtn" class="btn"><i class="fas fa-upload"></i> Importar</button>
+      <button id="exportBtn" class="btn"><i class="fas fa-download"></i> Exportar Consolidado</button>
+      <button id="downloadTemplateBtn" class="btn"><i class="fas fa-file-download"></i> Descargar Template</button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filter-section">
+      <h2>Filtrar Transacciones</h2>
+      <div class="filter-grid">
+        <div>
+          <label>Monto (ej: 100 o 50-200):</label>
+          <input type="text" id="filterAmount" class="filter-input" placeholder="Monto" />
+        </div>
+        <div>
+          <label>Cuenta:</label>
+          <input type="text" id="filterAccount" class="filter-input" placeholder="Cuenta" />
+        </div>
+        <div>
+          <label>Fecha desde:</label>
+          <input type="date" id="filterDateFrom" class="filter-input" />
+        </div>
+        <div>
+          <label>Fecha hasta:</label>
+          <input type="date" id="filterDateTo" class="filter-input" />
+        </div>
+        <div>
+          <label>ID:</label>
+          <input type="text" id="filterId" class="filter-input" placeholder="ID" />
+        </div>
+        <div>
+          <label>Descripción:</label>
+          <input type="text" id="filterDescription" class="filter-input" placeholder="Descripción" />
+        </div>
+      </div>
+      <div class="filter-actions">
+        <button id="applyFilterBtn" class="btn"><i class="fas fa-filter"></i> Aplicar Filtros</button>
+        <button id="clearFilterBtn" class="btn"><i class="fas fa-trash-alt"></i> Limpiar Filtros</button>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="form-section">
+      <h2>Ingresar Transacción Manual</h2>
+      <form id="transactionForm">
+        <input type="text" id="id" placeholder="ID" required />
+        <input type="date" id="date" required />
+        <input type="text" id="account" placeholder="Cuenta" required />
+        <input type="text" id="description" placeholder="Descripción" required />
+        <input type="number" step="0.01" id="amount" placeholder="Monto" required />
+        <button type="submit" class="btn"><i class="fas fa-plus"></i> Agregar</button>
+      </form>
+    </div>
+
+    <!-- Estado y tabla -->
+    <div id="status" class="status">Esperando archivo o ingreso manual...</div>
+    <div id="transactionsTable" class="kpi-grid"></div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="scripts/load.js"></script>
+</body>
+</html>
