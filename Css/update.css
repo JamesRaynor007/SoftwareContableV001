@@ -1,0 +1,107 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0a2a33, #001f29);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #00b7c2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header p {
+  color: #7fa99b;
+  font-weight: 500;
+}
+
+/* Botones */
+.btn {
+  background: #004d61;
+  color: #fff;
+  border: 2px solid #00b7c2;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #00b7c2;
+  color: #001f29;
+  box-shadow: 0 0 10px #00b7c2;
+}
+
+/* Íconos */
+.btn i {
+  margin-right: 8px;
+  color: #00b7c2;
+  transition: transform 0.2s ease;
+}
+.btn:hover i {
+  transform: scale(1.2);
+}
+
+/* Inputs */
+input {
+  background: #1c1c1c;
+  border: 2px solid #004d61;
+  color: #e0e0e0;
+  padding: 8px;
+  margin: 5px 0;
+  width: 250px;
+}
+input:focus {
+  border-color: #00b7c2;
+  outline: none;
+  box-shadow: 0 0 5px #00b7c2;
+}
+
+/* Secciones */
+.controls {
+  background: rgba(0, 77, 97, 0.2);
+  border: 2px solid #004d61;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.controls label {
+  display: block;
+  margin-top: 10px;
+  color: #7fa99b;
+  font-weight: bold;
+}
+
+/* Tabla / Grid */
+.kpi-grid {
+  background: #0a2a33;
+  border: 2px solid #00b7c2;
+  padding: 20px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
+
+/* Estado */
+.status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #7fa99b;
+  text-align: center;
+}

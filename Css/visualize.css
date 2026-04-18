@@ -1,0 +1,120 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0a2a33, #001f29);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #00b7c2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header p {
+  color: #7fa99b;
+  font-weight: 500;
+}
+
+/* Botones */
+button {
+  background: #004d61;
+  color: #fff;
+  border: 2px solid #00b7c2;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #00b7c2;
+  color: #001f29;
+  box-shadow: 0 0 10px #00b7c2;
+}
+
+/* Inputs y selects */
+input, select {
+  background: #1c1c1c;
+  border: 2px solid #004d61;
+  color: #e0e0e0;
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+}
+input:focus, select:focus {
+  border-color: #00b7c2;
+  outline: none;
+  box-shadow: 0 0 5px #00b7c2;
+}
+
+/* Controles */
+.controls {
+  background: rgba(0, 77, 97, 0.2);
+  border: 2px solid #004d61;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.controls label {
+  display: block;
+  margin-top: 10px;
+  color: #7fa99b;
+  font-weight: bold;
+}
+
+/* Secciones de resultados */
+.kpi-grid {
+  background: #0a2a33;
+  border: 2px solid #00b7c2;
+  padding: 20px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table th, table td {
+  border: 1px solid #004d61;
+  padding: 8px;
+  text-align: left;
+}
+table th {
+  background: #004d61;
+  color: #00b7c2;
+  text-transform: uppercase;
+}
+table tr:nth-child(even) {
+  background: rgba(0, 77, 97, 0.2);
+}
+table tr:hover {
+  background: rgba(0, 183, 194, 0.2);
+}
+
+/* Estado */
+.status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #7fa99b;
+  text-align: center;
+}
